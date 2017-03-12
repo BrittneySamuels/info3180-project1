@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="flielisting-header">A Sinlge Profile by ID</h1>
+<div>
+        <form action="{{ url_for('profileid',userid=profile.id) }}" method="post"  enctype="application/json">
+            To see profile in JSON Format <button class="submit1" type="submit">POST</button>
+        </form>
+    </div>
+
+    <div class="profiles">
+        <div class="profilepic">
+        <img class="profilepic" src= "{{url_for ('static', filename = "uploads/" + profile.image)}}">
+        </div>
+        <div class="profileinfo">
+        <p><h2 class= "heading-name">{{profile.first_name }} {{profile.last_name }}</h2></p>
+        <p><strong>Profile Created On:</strong> {{profile.date }}</p>
+        <br>
+        <p><strong>Username:</strong> {{profile.username }}</p>
+        <p><strong>UserID:</strong> {{profile.id }}</p>
+        <p><strong>Gender:</strong> {{profile.gender }}</p>
+        <p><strong>Age:</strong> {{profile.age}}</p>
+        <br>
+        <p><em>{{profile.biography }}</em></p>
+        </div>
+    </div>
+     
+{% endblock %}

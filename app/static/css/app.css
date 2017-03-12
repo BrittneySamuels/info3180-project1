@@ -1,0 +1,46 @@
+body {
+    padding-top: 50px;
+}
+span{
+	color: red;
+} 
+.text1{
+	font-weight: normal;
+}
+.submit1{
+ 	background-color: #008CBA; /* blue */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 60px;
+}
+.form-control{
+    width:40%;
+}
+ #fgender{
+    margin-left: 10px;
+ }
+.profilepic{
+    float: left;
+    margin-right: 20px;
+    width:200px; 
+    height: 300px; 
+}
+
+.heading-name{
+    margin-top: 0px;
+}
+.profiles{
+    margin-top: 50px;
+    padding:20px;
+    width: 600px;
+    height: 24em;
+    background-color: gray;
+    border-radius: 10px;
+
+}

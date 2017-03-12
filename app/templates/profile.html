@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="contact-header"><b>Create a Profile<b></h1>
+<hr>
+<p class="text1">Fill in this form to create a user profile</p>
+<br>
+<form action="{{url_for('profile')}}" method="post" enctype="multipart/form-data">  
+	<div> 
+		<label for="fname">First Name</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter your first name</p>
+		<input type="text" id="firstname" name="first_name" size="35" required/>   
+	</div>
+	<br>
+	<div> 
+		<label for="lname">Last Name</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter your last name</p>
+		<input type="text" id="lastname" name="last_name" size="35" required/>   
+	</div>
+	<br>
+	<div> 
+		<label for="username">Username</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter a username</p>
+		<input type="text" id="username" name="username" size="35" required/>   
+	</div>
+	<br> 
+	<div> 
+		<label for="age">Age</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter your age name</p>
+		<input type="number" id="age" name="age" min="1" max="200" required/>   
+	</div>
+	<br>
+ 	<div>
+		<label for="biography">Biography</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter something about you.</p>
+		<textarea id="biography" name="biography" rows="4" cols="45" required></textarea>
+	</div>
+ 	<br>
+ 	<div>
+		<label for="file">Please upload a profile image</label><span>[Required]</span>
+		<input type="file" name="file" class="form-control" />
+	</div>
+	<br>
+ 	<div>
+		<label for="gender">Please select your gender</label><span>[Required]</span><br>
+		<input type="radio" name="gender" value="male"> Male
+  		<input type="radio" name="gender" id="fgender" value="female"> Female<br>
+	</div>
+	</div>
+	<br>	
+<button type="submit" class="submit1">Save</button> 
+</form>
+
+{% endblock %}
